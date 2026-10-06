@@ -186,6 +186,15 @@ form .primario {
   margin-bottom: .75rem;
 }
 
+.linha-info strong {
+  color: var(--tinta);
+  font-weight: 700;
+}
+
+.linha-form {
+  margin-bottom: 1.25rem;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -272,6 +281,40 @@ th, td {
 .so-impressao {
   display: none;
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+select {
+  display: block;
+  width: 100%;
+  margin-top: .25rem;
+  padding: .6rem .7rem;
+  font: inherit;
+  color: var(--tinta);
+  background: #fff;
+  border: 1px solid var(--linha);
+  border-radius: 6px;
+}
+select:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+
+select.campo-erro {
+  border-color: var(--erro);
+  outline: 2px solid var(--erro);
+}
+
+.linha-form + .linha-form {
+  border-top: 1px solid var(--linha);
+  padding-top: .85rem;
+}
+.linha-form .link {
+  margin-bottom: .85rem;
+}
+
+button.mais {
+  width: 100%;
   margin-bottom: 1rem;
 }
 

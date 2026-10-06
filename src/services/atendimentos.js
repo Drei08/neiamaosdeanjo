@@ -4,10 +4,11 @@ import { auth, db } from "../firebase.js";
 const col = () => collection(db, "atendimentos");
 
 // data no formato "AAAA-MM-DD"
-export async function salvarAtendimento({ data, cliente, itens, total, hora}) {
+export async function salvarAtendimento({ data, cliente, itens, total, hora, pagamento }) {
   return addDoc(col(), {
     data,
     hora: hora || "",
+    pagamento: pagamento || "",
     cliente: cliente || "",
     itens,
     total,

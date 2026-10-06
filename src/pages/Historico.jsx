@@ -70,7 +70,9 @@ ESSA AÇÃO NÃO PODE SER DESFEITA!`
           <article key={a.id} className="item-hist">
             <header>
               <strong>
-                {a.cliente || "Sem nome"} <small>{horaDe(a)}</small>
+                {a.cliente || "Sem nome"}
+                {a.pagamento && ` - ${a.pagamento}`}{" "}
+                <small>{horaDe(a)}</small>
               </strong>
               <span>{moeda(a.total)}</span>
             </header>
@@ -118,7 +120,8 @@ ESSA AÇÃO NÃO PODE SER DESFEITA!`
           <h1>{import.meta.env.VITE_NOME_NEGOCIO || "Recibo"}</h1>
           <p>Recibo de serviços - 2ª via</p>
           <div className="linha-info">
-            {segundaVia.cliente && <span>Cliente: {segundaVia.cliente}</span>}
+            {segundaVia.cliente && <span>Cliente: <strong>{segundaVia.cliente}</strong></span>}
+            {segundaVia.pagamento && <span>Pagamento: <strong>{segundaVia.pagamento}</strong></span>}
           </div>
           <table>
             <thead>
@@ -140,7 +143,7 @@ ESSA AÇÃO NÃO PODE SER DESFEITA!`
             <span>Total</span>
             <strong>{moeda(segundaVia.total)}</strong>
           </div>
-          
+
           <div className="so-impressao assinatura">
             <span>Recebido:</span>
             <span className="linha-assinatura"></span>
@@ -157,8 +160,10 @@ ESSA AÇÃO NÃO PODE SER DESFEITA!`
             <article key={a.id} className="item-hist">
               <header>
                 <strong>
-                  {a.cliente || "Sem nome"} <small>{horaDe(a)}</small>
-              </strong>
+                  {a.cliente || "Sem nome"}
+                  {a.pagamento && ` - ${a.pagamento}`}{" "}
+                  <small>{horaDe(a)}</small>
+                </strong>
                 <span>{moeda(a.total)}</span>
               </header>
               <ul>
