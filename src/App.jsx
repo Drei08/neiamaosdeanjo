@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute.jsx";
-import Login from "./pages/Login.jsx";
+import Login from "./components/devAla-login.jsx";
 import Atendimento from "./pages/Atendimento.jsx";
 import Historico from "./pages/Historico.jsx";
 

@@ -38,6 +38,19 @@ h1, h2 { font-family: Georgia, "Times New Roman", serif; margin: 0 0 .5rem; }
   align-items: center;
 }
 
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--mut);
+  border-top: 1px solid #ffffff14;
+  font-size: .9rem;
+}
+
+footer span {
+  font-size: 1.2rem;
+  color: var(--gold);
+}
+
 .topo a { 
   color: var(--suave);
   text-decoration:
@@ -317,6 +330,7 @@ button.mais {
   width: 100%;
   margin-bottom: 1rem;
 }
+
 
 @page {
   margin: 0;

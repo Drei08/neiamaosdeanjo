@@ -20,6 +20,7 @@ export default function PrivateRoute() {
       <main className="pagina">
         <Outlet />
       </main>
+      <footer className="topo">© {new Date().getFullYear()} <span className="dev-logo">dev<b>A<i className="flip">L</i>A</b></span> · Todos os Direitos Reservados</footer>
     </>
   );
 }

@@ -1,0 +1,137 @@
+.dev {
+  --d-bg: #0a0a0a;
+  --d-card: #141414;
+  --d-or: #ff6a00;
+  --d-tx: #f5f5f5;
+  --d-mut: #8f8f8f;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: var(--d-bg);
+  color: var(--d-tx);
+}
+
+.dev,
+.dev * {
+  box-sizing: border-box;
+}
+
+.dev-card {
+  max-width: 420px;
+  margin: 5vh auto 0;
+  padding: 2.2rem 2rem;
+  background: var(--d-card);
+  border: 1px solid #ffffff14;
+  border-top: 3px solid var(--d-or);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px #000a;
+}
+
+.dev-brand {
+  font-family: Oswald, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  color: var(--d-tx);
+}
+
+.dev-brand b {
+  color: var(--d-or);
+}
+
+.flip {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+.dev-muted {
+  color: var(--d-mut);
+}
+
+.dev-center {
+  text-align: center;
+  margin: .6rem 0 1.4rem;
+}
+
+.dev-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dev-form label {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  font-size: .9rem;
+  color: var(--d-mut);
+}
+
+.dev input {
+  padding: .8rem 1rem;
+  color: var(--d-tx);
+  background: #0a0a0a;
+  border: 1px solid #ffffff22;
+  border-radius: 10px;
+  color-scheme: dark;
+}
+
+.dev input:focus {
+  outline: 2px solid var(--d-or);
+  border-color: transparent;
+}
+
+.dev-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .85rem 1.4rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  background: var(--d-or);
+  border: 0;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+.dev-btn:hover {
+  filter: brightness(1.1);
+}
+
+.dev-btn:disabled {
+  opacity: .5;
+  cursor: wait;
+}
+
+.dev-link {
+  display: block;
+  margin-top: 1.4rem;
+  text-align: center;
+  font-size: .9rem;
+  color: var(--d-mut);
+}
+
+.dev-link:hover {
+  color: var(--d-or);
+}
+
+.dev-err {
+  color: #ff6b6b;
+  font-size: .9rem;
+}
+
+@media screen and (max-width: 600px) {
+  .dev {
+    padding: 1.2rem .8rem;
+  }
+
+  .dev-card {
+    margin-top: 15vh;
+    padding: 1.8rem 1.2rem;
+  }
+
+  .dev-brand {
+    font-size: 2rem;
+  }
+}
